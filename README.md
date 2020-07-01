@@ -32,38 +32,38 @@ The data is obtained from [Kaggle competition](https://www.kaggle.com/c/walmart-
 
 3. Preparing Data to Modeling
 
-  3.1  One hot encoding categorical variables
-  
-  3.2  Correlation of features
-  
-  3.3  Metric for the dataset
-  
-  3.4 Creating Train -Test splits
+    3.1  One hot encoding categorical variables
+
+    3.2  Correlation of features
+
+    3.3  Metric for the dataset
+
+    3.4 Creating Train -Test splits
   
 4. Modelling.
 
 5. Time Series Modelling:
 
-   5.1 Testing For stationarity of model
-   
-       5.1.1 Adfuller Test
-       
-       5.1.2. KPSS test
-       
-   5.2 Decomposing weekly data to observe Seasonality
-   
-   5.3 Trying To Make Data More Stationary
-   
-      5.3.1 Difference
-      
-      5.3.2 Shift
-      
-      5.3.3 Log
-      
-   5.4 Auto ARIMA model
-   
-   5.5 Exponential Smoothing using Holtwinter model.
-   
+     5.1 Testing For stationarity of model
+
+         5.1.1 Adfuller Test
+
+         5.1.2. KPSS test
+
+     5.2 Decomposing weekly data to observe Seasonality
+
+     5.3 Trying To Make Data More Stationary
+
+        5.3.1 Difference
+
+        5.3.2 Shift
+
+        5.3.3 Log
+
+     5.4 Auto ARIMA model
+
+     5.5 Exponential Smoothing using Holtwinter model.
+
 
 **Metric:**
 
