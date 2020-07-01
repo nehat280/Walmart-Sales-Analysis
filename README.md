@@ -1,5 +1,5 @@
 # Walmart-Sales-Analysis
-This repository contains Walmart sales prediction from [Kaggle](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview).
+This repository contains Walmart sales prediction from [Kaggle](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview).In this Time Series data set i have focused more on building Time Series models like ARIMA, Exponential Smoothing using Holtswinter model.
 
 **Problem:**
 
@@ -29,12 +29,27 @@ The data is obtained from [Kaggle competition](https://www.kaggle.com/c/walmart-
 
 2. Exploring Data Analysis
 
-2. Preparing Data to Modeling
+3. Preparing Data to Modeling
+  3.1  One hot encoding categorical variables
+  3.2  Correlation of features
+  3.3  Metric for the dataset
+  3.4 Creating Train -Test splits
+4. Modelling.
 
-3. Random Forest Regressor
+5. Time Series Modelling:
+   5.1 Testing For stationarity of model
+       5.1.1 Adfuller Test
+       5.1.2. KPSS test
+   5.2 Decomposing weekly data to observe Seasonality
+   5.3 Trying To Make Data More Stationary
+      5.3.1 Difference
+      5.3.2 Shift
+      5.3.3 Log
+   5.4 Auto ARIMA model
+   5.5 Exponential Smoothing using Holtwinter model.
+   
 
-4. ARIMA/ExponentialSmooting/ARCH Models
-
+ARIMA/ExponentialSmooting/
 **Metric:**
 
 The metric of the competition is weighted mean absolute error (WMAE). Weight of the error changes when it is holiday. It can be found in detail [here](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview/evaluation).
@@ -57,57 +72,18 @@ The metric of the competition is weighted mean absolute error (WMAE). Weight of 
 - January sales are significantly less than other months. This is the result of November and December high sales. After two high sales month, people prefer to pay less on January.
 - CPI, temperature, unemployment rate and fuel price have no pattern on weekly sales. 
 
-More detailed finding can be found in notebooks with explorations. 
+More detailed finding can be found in notebook with explorations. 
 
-**Future Improvements:**
 
-- Data will be made more stationary with different techniques.
-
-- More detailed feature engineering and feature selection will be done.
-
-- More data can be found to observe holiday effects on sales and different holidays will be added like Easter, Halloween and  Come Back to School times.
-
-- Markdown effects on model will be improved according to department sales.
-
-- Different models can be build for special stores or departments. 
-
-- Market basket analysis can be done to find higher demand items of departments.
- 
- # Repository Guide
- 
- **CSV Files:**
- 
- The raw data files which obtained from Kaggle can be found ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/tree/master/Raw%20Data
- 
- The cleaned data can be found ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/blob/master/clean_data.csv
- 
- **Notebooks:**
- 
- Every step for data understanding, cleaning, exploring and feature engineering can be found in ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/blob/master/STEP1_Cleaning_and_EDA.ipynb
- 
- Metric and Random Forest Regressor with feature importance steps can be found in ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/blob/master/STEP2_Random_Forest_Regressor.ipynb
- 
- Time Series models can be found in ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/blob/master/STEP3_Modeling_ARIMA_and_ExponentialSmoothing.ipynb
- 
- **Presentation:**
- 
- Presentation can be found from here in .pdf format ;
- 
- https://github.com/ezgigm/Project4_Store_Sales_Forecasting/blob/master/Walmart%20Sales%20Forecast%20Presentation.pdf
-  
 # Resources 
  
  For all details of the competition:
  
  https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview
  
+
+References:
+1. why to use continuous instead of categorical
+
+* https://roamanalytics.com/2016/10/28/are-categorical-variables-getting-lost-in-your-random-forests/
+* https://medium.com/data-design/visiting-categorical-features-and-encoding-in-decision-trees-53400fa65931
