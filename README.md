@@ -1,5 +1,6 @@
 # Walmart-Sales-Analysis
 This repository contains Walmart sales prediction from [Kaggle](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview).In this Time Series data set i have focused more on building Time Series models like ARIMA, Exponential Smoothing using Holtswinter model.
+Using Random Forest Regressor i achieved Weighted mean absolute error(WMAE) of 2189 , where as using Esponential smoothing i was able to reduce WMAE to 821.
 
 **Problem:**
 
@@ -30,26 +31,40 @@ The data is obtained from [Kaggle competition](https://www.kaggle.com/c/walmart-
 2. Exploring Data Analysis
 
 3. Preparing Data to Modeling
+
   3.1  One hot encoding categorical variables
+  
   3.2  Correlation of features
+  
   3.3  Metric for the dataset
+  
   3.4 Creating Train -Test splits
+  
 4. Modelling.
 
 5. Time Series Modelling:
+
    5.1 Testing For stationarity of model
+   
        5.1.1 Adfuller Test
+       
        5.1.2. KPSS test
+       
    5.2 Decomposing weekly data to observe Seasonality
+   
    5.3 Trying To Make Data More Stationary
+   
       5.3.1 Difference
+      
       5.3.2 Shift
+      
       5.3.3 Log
+      
    5.4 Auto ARIMA model
+   
    5.5 Exponential Smoothing using Holtwinter model.
    
 
-ARIMA/ExponentialSmooting/
 **Metric:**
 
 The metric of the competition is weighted mean absolute error (WMAE). Weight of the error changes when it is holiday. It can be found in detail [here](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/overview/evaluation).
